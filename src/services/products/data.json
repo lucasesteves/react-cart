@@ -1,0 +1,114 @@
+[
+    {
+        "id": 0,
+        "idCategory": 0,
+        "name": "Coca-cola lata",
+        "description": "Coca-cola lata 350ml",
+        "price": 3.50,
+        "image":"url"
+    },
+    {
+        "id": 1,
+        "idCategory": 0,
+        "name": "Fanta uva lata",
+        "description": "Fanta uva lata 350ml",
+        "price": 3.00,
+        "image":"url"
+    },
+    {
+        "id": 2,
+        "idCategory": 0,
+        "name": "Fanta laranja lata",
+        "description": "Fanta laranja lata 350ml",
+        "price": 3.00,
+        "image":"url"
+    },
+    {
+        "id": 3,
+        "idCategory": 0,
+        "name": "Guaravita",
+        "description": "Guaravita 250ml",
+        "price": 1.50,
+        "image":"url"
+    },
+    {
+        "id": 4,
+        "idCategory": 0,
+        "name": "Del Valle",
+        "description": "Del Valle lata 250ml",
+        "price": 4.00,
+        "image":"url"
+    },
+    {
+        "id": 5,
+        "idCategory": 2,
+        "name": "Coxinha de frango",
+        "description": "Coxinha de frango 100g",
+        "price": 2.50,
+        "image":"url"
+    },
+    {
+        "id": 6,
+        "idCategory": 2,
+        "name": "Pastel de queijo",
+        "description": "Pastel de queijo 150g",
+        "price": 3.50,
+        "image":"url"
+    },
+    {
+        "id": 7,
+        "idCategory": 2,
+        "name": "Batata frita",
+        "description": "Batata frita a unidade 300g",
+        "price": 4.50,
+        "image":"url"
+    },
+    {
+        "id": 8,
+        "idCategory": 2,
+        "name": "Kibe",
+        "description": "Kibe frito 100g",
+        "price": 1.20,
+        "image":"url"
+    },
+    {
+        "id": 9,
+        "idCategory": 2,
+        "name": "Empada de frango",
+        "description": "Empada de frango 200g",
+        "price": 3.50,
+        "image":"url"
+    },
+    {
+        "id": 10,
+        "idCategory": 1,
+        "name": "Bolo de chocolate",
+        "description": "Bolo de chocolate 1 fatia 200g",
+        "price": 7.00,
+        "image":"url"
+    },
+    {
+        "id": 11,
+        "idCategory": 1,
+        "name": "Torta Alemã",
+        "description": "Torta alemã 1 fatia 250g",
+        "price": 8.00,
+        "image":"url"
+    },
+    {
+        "id": 12,
+        "idCategory": 1,
+        "name": "Pudim de leite",
+        "description": "Pudim de leite 1 fatia 250g",
+        "price": 6.00,
+        "image":"url"
+    },
+    {
+        "id": 13,
+        "idCategory": 1,
+        "name": "Sorvete de flocos",
+        "description": "Sorvete de flocos caixa 400g",
+        "price": 12.00,
+        "image":"url"
+    }
+]
