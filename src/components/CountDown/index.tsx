@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 import { useDispatch } from 'react-redux';
 import { Timer } from './styles';
 import { cleanCart } from '../../store/shop/actions';
@@ -31,4 +31,4 @@ const Counter:React.FC = () => {
     )
 }
 
-export default Counter;
+export default memo(Counter);

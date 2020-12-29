@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTheme } from 'styled-components';
 import { TableRow, Row, Number, Select } from './styles';
@@ -41,4 +41,4 @@ const Quantity:React.FC<IQuantity> = ({ item }) => {
     )
 }
 
-export default Quantity
+export default memo(Quantity)
