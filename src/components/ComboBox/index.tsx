@@ -7,20 +7,20 @@ interface IComboBox {
   change: (e: number) => void;
 }
 
-function ComboBox({ value, change }: IComboBox) {
+const ComboBox = ({ value, change }: IComboBox) => {
   const handlerChange = (value: string) => {
     change(parseInt(value));
   };
 
   return (
     <Select onChange={(e) => handlerChange(e.target.value)} value={value}>
-      {category.map((state, index) => (
-        <Option key={index} value={state.id}>
+      {category.map((state) => (
+        <Option key={state.id} value={state.id}>
           {state.name}
         </Option>
       ))}
     </Select>
   );
-}
+};
 
 export default ComboBox;

@@ -6,9 +6,9 @@ export default (reducers:any) => {
     {
       key: 'root',
       storage,
-      whitelist:['shop']
+      whitelist: ['shop'],
     },
-    reducers
+    reducers,
   );
 
   return persistedReducer;

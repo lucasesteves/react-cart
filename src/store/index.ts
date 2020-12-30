@@ -12,4 +12,3 @@ const store = createStore(reducer);
 const persistor = persistStore(store);
 
 export { store, persistor };
-

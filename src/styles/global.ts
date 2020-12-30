@@ -9,7 +9,7 @@ export default createGlobalStyle`
     }
 
     body{
-        background:${props=>props.theme.colors.background};
+        background:${(props) => props.theme.colors.background};
         font-family:Roboto, sans-serif;
     }
 
@@ -18,14 +18,14 @@ export default createGlobalStyle`
     }
 
     &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px ${props=>props.theme.colors.white}; 
+        box-shadow: inset 0 0 5px ${(props) => props.theme.colors.white}; 
         border-radius: 5px;
     }
     
     &::-webkit-scrollbar-thumb {
-        background: ${props=>props.theme.colors.primary}; 
+        background: ${(props) => props.theme.colors.primary}; 
         border-radius: 5px;
     }
   
 
-`
+`;

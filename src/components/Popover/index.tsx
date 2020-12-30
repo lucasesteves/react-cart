@@ -7,18 +7,26 @@ interface IPopover {
     open:boolean;
 }
 
-export const Popover:React.FC<IPopover> = ({ open }) => {
-    const cart = useSelector((state:ApplicationState)=>state.shop.cart) 
+const Popover = ({ open }:IPopover) => {
+  const cart = useSelector((state:ApplicationState) => state.shop.cart);
 
-    return(
-        <Wrapper open={open}>
-            <Title size={18}>Carrinho</Title>
-            {cart.map((item,index)=>(
-                <Item key={index}>{item.name} <Text> R$ {item.price.toFixed(2)}</Text></Item>
-            ))}
-            {cart.length === 0 && <Title size={14}>Vazio</Title>}
-        </Wrapper>
-    )
-}
+  return (
+    <Wrapper open={open}>
+      <Title size={18}>Carrinho</Title>
+      {cart.map((item) => (
+        <Item key={item.id}>
+          {item.name}
+          {' '}
+          <Text>
+            {' '}
+            R$
+            {item.price.toFixed(2)}
+          </Text>
+        </Item>
+      ))}
+      {cart.length === 0 && <Title size={14}>Vazio</Title>}
+    </Wrapper>
+  );
+};
 
 export default Popover;

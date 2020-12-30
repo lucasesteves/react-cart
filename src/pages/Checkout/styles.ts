@@ -25,11 +25,11 @@ export const Column = styled.div`
 
 export const Row = styled.div<{direction?:boolean}>`
     display: flex;
-    flex-direction: ${props => props.direction ? 'row-reverse' : 'row'};
-`
+    flex-direction:${(props) => props.direction && 'row-reverse'};
+`;
 
 export const Table = styled.div`
-    border: 1px solid ${props => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
     display:flex;
     flex-direction:column;
     margin:20px 0 32px 0;
@@ -40,14 +40,14 @@ export const TableRow = styled.div`
     padding: 12px 15px;
     display:flex;
     justify-content:space-between;
-    border-bottom:1px solid ${props => props.theme.colors.primary};
+    border-bottom:1px solid ${(props) => props.theme.colors.primary};
 
     &:last-child {
         border-bottom:none;
     }
 `;
 
-export const Warn =  styled.h2`
+export const Warn = styled.h2`
     font-size:20px;
     padding-top:3px;
     margin-left:4px;

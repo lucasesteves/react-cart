@@ -8,16 +8,16 @@ interface ITitle {
     color?:string;
 }
 
-const Title:React.FC<ITitle> = ({ children, size, center, color }) => {
-    return(
-        <Content 
-            size={ size } 
-            center={ center ? center : false }
-            color={ color ? color: '' }
-        >
-            { children }
-        </Content>
-    )
-}
+const Title = ({
+  children, size, center, color,
+}:ITitle) => (
+  <Content
+    size={size}
+    center={center || false}
+    color={color || ''}
+  >
+    { children }
+  </Content>
+);
 
 export default Title;
