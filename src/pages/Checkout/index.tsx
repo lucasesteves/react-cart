@@ -37,14 +37,14 @@ const Checkout = () => {
 
   return (
     <Content>
-      {cart.length > 0 ? (
+      {total > 0 ? (
         <>
           <Title size={32} center color={theme.colors.primary}>Finalizar pedido</Title>
           <Detail>
             <GiShoppingBag size={88} color={theme.colors.primary} />
             <Column>
               <Title size={24}>Armazém do seu zé</Title>
-              <Row>
+              <Row $direction={false}>
                 <CountDown />
                 <Warn> min restantes</Warn>
               </Row>
@@ -62,7 +62,7 @@ const Checkout = () => {
               <Title size={22}>{`R$ ${total.toFixed(2)}`}</Title>
             </TableRow>
           </Table>
-          <Row direction>
+          <Row $direction>
             <Button submit={submit}>Finalizar compra</Button>
           </Row>
         </>

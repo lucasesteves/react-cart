@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div<{open:boolean}>`
-    display: ${props=>props.open ? 'flex' : 'none' }; 
+    display: ${(props) => (props.open ? 'flex' : 'none')}; 
     position: fixed; 
     z-index: 1; 
     align-items: center;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div<{open:boolean}>`
 `;
 
 export const Content = styled.div`
-    background-color: ${props => props.theme.colors.white};
+    background-color: ${(props) => props.theme.colors.white};
     margin: auto;
     padding: 32px 20px 20px 20px;
     border-radius: 4px;
@@ -36,5 +36,5 @@ export const Content = styled.div`
 `;
 
 export const Space = styled.div<{value:number}>`
-    height: ${props => `${props.value}px`};
-`;  
+    height: ${(props) => `${props.value}px`};
+`;

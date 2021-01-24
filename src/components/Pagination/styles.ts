@@ -22,9 +22,9 @@ export const PageItem = styled.h2<{ page: boolean }>`
     margin: 0 10px;
     justify-content: center;
     align-items: center;
-    border: 1px solid ${props => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
     border-radius: 4px;
-    background: ${props => props.page ? props.theme.colors.primary : props.theme.colors.background};
-    color: ${props => props.page ? props.theme.colors.white : props.theme.colors.primary}; 
+    background: ${(props) => (props.page ? props.theme.colors.primary : props.theme.colors.background)};
+    color: ${(props) => (props.page ? props.theme.colors.white : props.theme.colors.primary)}; 
     cursor: pointer;
 `;

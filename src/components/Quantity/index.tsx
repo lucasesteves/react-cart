@@ -15,7 +15,6 @@ const Quantity = ({ item }:IQuantity) => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const [total, setTotal] = useState(item.counter);
-
   const action = (type:string) => {
     if (type === 'add') {
       setTotal(total + 1);
@@ -41,6 +40,7 @@ const Quantity = ({ item }:IQuantity) => {
         <Number>{ total }</Number>
         <Select color={theme.colors.success} onClick={() => action('add')}>+</Select>
       </Row>
+      <p>Asd</p>
       <Title size={22}>{item.name}</Title>
       <Title size={22}>{`R$ ${(total * item.price).toFixed(2)}`}</Title>
     </TableRow>

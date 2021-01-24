@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface IRow{
+    direction?:boolean
+}
+
 export const Content = styled.div`
     width: 624px;
     padding-top: 52px;
@@ -23,9 +27,9 @@ export const Column = styled.div`
     padding: 20px 0;
 `;
 
-export const Row = styled.div<{direction?:boolean}>`
+export const Row = styled.div<{$direction?:boolean}>`
     display: flex;
-    flex-direction:${(props) => props.direction && 'row-reverse'};
+    flex-direction:${(props) => (props.$direction ? 'row-reverse' : 'row')};
 `;
 
 export const Table = styled.div`

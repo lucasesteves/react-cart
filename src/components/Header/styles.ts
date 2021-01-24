@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Wrapper =  styled.div`
+export const Wrapper = styled.div`
     height: 60px;
     width: 100%;
-    background: ${props=>props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.primary};
     padding: 15px 20px;
     box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.8), 6px 6px 16px rgba(79, 105, 132, 0.15);
-    color: ${props=>props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
     display: flex;
     justify-content: space-between;
 `;
@@ -33,7 +33,7 @@ export const Badge = styled.span`
     font-size: 12px;
     font-weight: 900;
     text-align: center;
-    background: ${props => props.theme.colors.white};
-    color: ${props => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.primary};
     border-radius: 20px;
 `;

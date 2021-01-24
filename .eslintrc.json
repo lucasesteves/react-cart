@@ -27,6 +27,7 @@
         "no-unused-vars":"off",
         "no-plusplus":"off",
         "no-shadow":"off",
+        "max-len":"off",
         "radix":"off",
         "no-tabs":"warn",
         "no-unused-expressions":"warn",
