@@ -22,10 +22,10 @@ const reducerMock: any = {
   },
 };
 
-describe('Should show the products list', () => {
+describe('Should add product to cart', () => {
   const storeMock = (state = reducerMock) => state;
   const store = createStore(storeMock);
-  it('Show cart list', () => {
+  it('Should see the name of the product', () => {
     render(
       <Provider store={store}>
         <ThemeProvider theme={Theme()}>
