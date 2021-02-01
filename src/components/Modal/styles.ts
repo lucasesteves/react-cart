@@ -27,11 +27,25 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: closeModalAnimation .3s ease-in-out;
+    animation-fill-mode:backwards; 
 
     @media screen and (max-width:600px) {
         width: 100%;
         border-radius: 12px 12px 0 0;
         height: calc(100vh - 40px);
+        animation: openModalAnimation .2s ease-in-out;
+        animation-fill-mode:forwards; 
+    }
+
+    @keyframes openModalAnimation {
+        0% { height: 229px; }
+        100% { height:calc(100vh - 40px); }
+    }
+
+    @keyframes closeModalAnimation {
+        0% { height:calc(100vh - 40px); }
+        100% { height: 229px; }
     } 
 `;
 
