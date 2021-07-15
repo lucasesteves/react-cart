@@ -1,7 +1,7 @@
 declare interface ShopState {
     cart:Array<ProductCart>;
     total:number;
-} 
+}
 
 declare interface Product{
     id:number;

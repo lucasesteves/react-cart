@@ -1,55 +1,67 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".jsx", ".js", ".ts", ".tsx"] }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
+    "no-use-before-define": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "max-len": "off",
+    "radix": "off",
+    "no-tabs": "warn",
+    "no-unused-expressions": "warn",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "comma-spacing": "error",
+    "@typescript-eslint/comma-spacing": ["error"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
     ],
-    "rules": {
-        "react/jsx-filename-extension":[1, {"extensions":[".jsx",".js",".ts",".tsx"]}],
-        "no-use-before-define": "off",
-        "no-undef":"off",
-        "no-unused-vars":"off",
-        "no-plusplus":"off",
-        "no-shadow":"off",
-        "max-len":"off",
-        "radix":"off",
-        "no-tabs":"warn",
-        "no-unused-expressions":"warn",
-        "react/require-default-props":"off",
-        "import/prefer-default-export": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-              "js": "never",
-              "jsx": "never",
-              "ts": "never",
-              "tsx": "never"
-            }
-         ]
-    },
-    "settings": {
-        "import/resolver": {
-          "node": {
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
-          }
-        }
+    "object-curly-newline": ["error", "always"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "indent": ["error", "tab"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
+  }
 }

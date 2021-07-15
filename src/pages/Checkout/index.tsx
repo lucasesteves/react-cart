@@ -4,9 +4,7 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { useTheme } from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import {
-  Content, Detail, Column, Row, Table, TableRow, Warn,
-} from './styles';
+import { Content, Detail, Column, Row, Table, TableRow, Warn } from './styles';
 import Title from '../../components/Title';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
@@ -20,7 +18,7 @@ const Checkout = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const { cart, total } = useSelector((state:ApplicationState) => ({
+  const { cart, total } = useSelector((state: ApplicationState) => ({
     cart: state.shop.cart,
     total: state.shop.total,
   }));
@@ -29,7 +27,7 @@ const Checkout = () => {
     setOpen(true);
   };
 
-  const close = (status:string) => {
+  const close = (status: string) => {
     status === 'success' && dispatch(cleanCart());
     setOpen(false);
     history.push('/');
@@ -39,7 +37,9 @@ const Checkout = () => {
     <Content>
       {total > 0 ? (
         <>
-          <Title size={32} center color={theme.colors.primary}>Finalizar pedido</Title>
+          <Title size={32} center color={theme.colors.primary}>
+            Finalizar pedido
+          </Title>
           <Detail>
             <GiShoppingBag size={88} color={theme.colors.primary} />
             <Column>
@@ -51,10 +51,12 @@ const Checkout = () => {
             </Column>
           </Detail>
 
-          <Title size={24} color={theme.colors.primary}>Revise os seus itens</Title>
+          <Title size={24} color={theme.colors.primary}>
+            Revise os seus itens
+          </Title>
 
           <Table>
-            {cart.map((item) => (
+            {cart.map(item => (
               <Quantity key={item.id} item={item} />
             ))}
             <TableRow>
@@ -66,8 +68,20 @@ const Checkout = () => {
             <Button submit={submit}>Finalizar compra</Button>
           </Row>
         </>
-      ) : <Modal open status="deny" title="Nenhum produto foi encontrado no carrinho" close={close} /> }
-      <Modal open={open} status="success" title="Pedido realizado com sucesso!" close={close} />
+      ) : (
+        <Modal
+          open
+          status="deny"
+          title="Nenhum produto foi encontrado no carrinho"
+          close={close}
+        />
+      )}
+      <Modal
+        open={open}
+        status="success"
+        title="Pedido realizado com sucesso!"
+        close={close}
+      />
     </Content>
   );
 };
